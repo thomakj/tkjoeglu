@@ -42,6 +42,6 @@ public class HTMLReader {
 	
 	
 	public static void main(String[] args) {
-		HTMLReader r = new HTMLReader();
+		new HTMLReader();
 	}
 }

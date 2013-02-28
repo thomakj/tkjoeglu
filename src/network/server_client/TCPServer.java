@@ -7,6 +7,7 @@ public class TCPServer {
 	public static void main(String[] args) throws Exception{
 		String clientSentence;
 		String capitalizedSentence;
+		@SuppressWarnings("resource")
 		ServerSocket welcomeSocket = new ServerSocket(6789); 
 		while(true){
 			Socket connectionSocket = welcomeSocket.accept();

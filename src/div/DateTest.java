@@ -8,6 +8,7 @@ public class DateTest {
 	
 	public static void main(String[] args) {
 		DateFormat sdf = new SimpleDateFormat("hh:mm:ss");
+		@SuppressWarnings("deprecation")
 		Date one = new Date(2012,10,9,21,20);
 		Date two = new Date();
 		System.out.println(sdf.format(two));
