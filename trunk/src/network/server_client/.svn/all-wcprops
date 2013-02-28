@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/svn/!svn/ver/3/trunk/src/network/server_client
+END
+TCPClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/3/trunk/src/network/server_client/TCPClient.java
+END
+UDPClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/3/trunk/src/network/server_client/UDPClient.java
+END
+UDPServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/3/trunk/src/network/server_client/UDPServer.java
+END
+TCPServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/!svn/ver/3/trunk/src/network/server_client/TCPServer.java
+END
