@@ -1,43 +1,28 @@
 package crypto;
 
-import java.io.UnsupportedEncodingException;
+import java.math.BigInteger;
 import java.security.*;
 
-public class MD5 {
+public class Md5 {
 
-	private String yourString;
-	private byte[] bytesOfMessage, theDigest;
-	
-	public void input(String yourString) {
-		// TODO Set restrictions on input
-		this.yourString = yourString;
-	}
-	
-	public void changeToByte() {
-		try {
-			bytesOfMessage = yourString.getBytes("UTF-8");
-		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-	
-	public void encrypt(String yourString) {
-		try {
-			MessageDigest md = MessageDigest.getInstance("MD5");
-			theDigest = md.digest(bytesOfMessage);
+	public String getMd5Hash(String str) {
 		
+		byte[] bytesOfString = str.getBytes();
+		
+		MessageDigest md = null;
+		try {
+			md = MessageDigest.getInstance("MD5");
 		} catch (NoSuchAlgorithmException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	}
-	
-	public void printHash(byte[] theDigest) {
-		System.out.println(this.theDigest);
-	}
-	
-	public static void main(String[] args) {
 		
+		byte[] theDigest = md.digest(bytesOfString);
+		
+		BigInteger bigInt = new BigInteger(1, theDigest);
+		
+		String hash = bigInt.toString(16);
+		
+		return hash;
 	}
+	
 }
